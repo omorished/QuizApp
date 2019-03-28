@@ -1,0 +1,38 @@
+PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - CountdownLabel (4.0.1)
+  - LTMorphingLabel (0.5.8)
+  - SwiftyButton (0.8.2)
+
+DEPENDENCIES:
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - CountdownLabel
+  - LTMorphingLabel
+  - SwiftyButton
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CountdownLabel
+    - LTMorphingLabel
+    - SwiftyButton
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CountdownLabel: c9975e3f329140b5e7d1f45cd63b1300badd1712
+  LTMorphingLabel: 8adaba524476098ed307626d0bc42b7f8fadb7e0
+  SwiftyButton: 5b0ef314e9cf61cf8a83e456ddd1ea1f53f30598
+
+PODFILE CHECKSUM: 52c50ec25a135976fa451ac7ab777cc8b49b482d
+
+COCOAPODS: 1.5.3

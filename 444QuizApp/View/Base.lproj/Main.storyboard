@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="_44QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="quizllerLogoName2" translatesAutoresizingMaskIntoConstraints="NO" id="Bw4-vq-GJo">
+                                <rect key="frame" x="72" y="105" width="233" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7r-u7-xhP" userLabel="TextQuizBtn" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="46" y="372" width="287" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
+                                <state key="normal" title="Text Quiz">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="textBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8P4-n8-Jvc"/>
+                                    <segue destination="Pw6-uy-jVJ" kind="show" identifier="goToTextQuiz" id="V8m-Di-FYd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ6-G2-BTD" userLabel="PhotoQuizBtn" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="44" y="487" width="289" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
+                                <state key="normal" title="Photo Quiz">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="photoBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ixu-HC-NL2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RF-12-Kxv" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="262" y="645" width="85" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Hello" image="unmuteImage">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeSoundbtnImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tg7-JZ-CY2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoQuizBtn" destination="dJ6-G2-BTD" id="6s9-Yt-diP"/>
+                        <outlet property="soundBtn" destination="3RF-12-Kxv" id="fnN-4C-Nn6"/>
+                        <outlet property="textQuizBtn" destination="R7r-u7-xhP" id="9HF-UQ-lYu"/>
+                        <segue destination="NCg-5q-SRe" kind="show" identifier="goToPhotoQuiz" id="cgp-bg-b6Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3839" y="-206"/>
+        </scene>
+        <!--Text Quiz View Controller-->
+        <scene sceneID="mdf-QV-6MR">
+            <objects>
+                <viewController id="Pw6-uy-jVJ" userLabel="Text Quiz View Controller" customClass="TextQuizViewController" customModule="_44QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vva-2u-utl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K1k-75-xlH">
+                                <rect key="frame" x="0.0" y="34" width="375" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.01191727836" green="0.90672999870000004" blue="0.24361612999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.01191727836" green="0.90672999870000004" blue="0.24361612999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goe-Vq-0Ze" userLabel="timerLeftLabel" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="162" y="83" width="51" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.41873878240000001" green="0.72442823649999999" blue="0.94023936990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Even though this lib was used in a few products on App Store, it’s still an experimental project." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMR-OW-ZNS" userLabel="questionTextLabel">
+                                <rect key="frame" x="8" y="244" width="358" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="morphingProgress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="pQY-HK-ihH" userLabel="profilePhotoImage">
+                                <rect key="frame" x="2" y="54" width="76" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F49-Cf-FxI" userLabel="scoreLabel" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="72" y="83" width="45" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.15686274509803921" green="0.69019607843137254" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHa-OZ-TzM" userLabel="valueLabel" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="99" y="84" width="45" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.074399660833660453" green="0.33167915489035538" blue="0.2428081332407942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heartImage" translatesAutoresizingMaskIntoConstraints="NO" id="yPt-NN-3go" userLabel="heartImage1">
+                                <rect key="frame" x="252" y="84" width="41" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heartImage" translatesAutoresizingMaskIntoConstraints="NO" id="UPf-Mz-Yfb" userLabel="heartImage1">
+                                <rect key="frame" x="293" y="84" width="41" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heartImage" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-4F-Rp8" userLabel="heartImage1">
+                                <rect key="frame" x="333" y="84" width="41" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Te1-3g-UsP">
+                                <rect key="frame" x="149" y="64" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.41873878240000001" green="0.72442823649999999" blue="0.94023936990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-iM-n3f" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="336" y="88" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="homeImage"/>
+                                <connections>
+                                    <action selector="homeBtnPressed:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="Pec-eH-1CG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfT-r0-vry" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="336" y="131" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="unmute(settings)"/>
+                                <connections>
+                                    <action selector="soundBtnPressed:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="8iG-zr-AcS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBr-F7-uoD" userLabel="settingsBtn">
+                                <rect key="frame" x="336" y="44" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="settingsNotClicked"/>
+                                <connections>
+                                    <action selector="settingsBtnPressed:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="2sw-Sw-YSp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hx-wt-n5b" userLabel="Button3" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="8" y="584" width="175" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button3"/>
+                                <connections>
+                                    <action selector="fourButtonChoices:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="76m-E3-hsJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDE-94-gnQ" userLabel="Button4" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="191" y="584" width="175" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button4"/>
+                                <connections>
+                                    <action selector="fourButtonChoices:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="Oim-0C-D0t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6y-jN-pxa" userLabel="Button1" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="8" y="456" width="175" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fourButtonChoices:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="r6h-3M-qBW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7h-B5-f3F" userLabel="Button2" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="191" y="456" width="175" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button2">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fourButtonChoices:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="ukI-gs-80A"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ss-M8-Ozf" userLabel="mercyQuestionTypeImage">
+                                <rect key="frame" x="147" y="137" width="94" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIB-Xm-fMV" userLabel="goldenQuestionTypeImage">
+                                <rect key="frame" x="140" y="137" width="95" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EN1-Hm-ocz"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn1" destination="V6y-jN-pxa" id="bQK-99-Nok"/>
+                        <outlet property="btn2" destination="v7h-B5-f3F" id="tVd-Ym-Zah"/>
+                        <outlet property="btn3" destination="9Hx-wt-n5b" id="cYx-F5-U9q"/>
+                        <outlet property="btn4" destination="cDE-94-gnQ" id="GXf-tP-FkH"/>
+                        <outlet property="goldenQuestionTypeImage" destination="EIB-Xm-fMV" id="h8S-Ed-zom"/>
+                        <outlet property="heartImage1" destination="yPt-NN-3go" id="PzB-eL-NHY"/>
+                        <outlet property="heartImage2" destination="UPf-Mz-Yfb" id="sbB-ya-NKl"/>
+                        <outlet property="heartImage3" destination="cQn-4F-Rp8" id="rjv-yD-Va0"/>
+                        <outlet property="homeBtn" destination="tNm-iM-n3f" id="2gp-94-JtQ"/>
+                        <outlet property="mercyQuestionTypeImage" destination="7ss-M8-Ozf" id="XZg-ce-RYl"/>
+                        <outlet property="plusLabel" destination="DHa-OZ-TzM" id="BoT-9S-pRn"/>
+                        <outlet property="progressBar" destination="K1k-75-xlH" id="Nup-rb-czx"/>
+                        <outlet property="questionTextLabel" destination="QMR-OW-ZNS" id="rT1-xi-eBQ"/>
+                        <outlet property="scoreLabel" destination="F49-Cf-FxI" id="saX-bk-Y1k"/>
+                        <outlet property="settingsBtn" destination="LBr-F7-uoD" id="2at-lG-23v"/>
+                        <outlet property="soundBtn" destination="rfT-r0-vry" id="3he-Eh-fb9"/>
+                        <outlet property="timerLeftLabel" destination="goe-Vq-0Ze" id="c9f-ys-koe"/>
+                        <segue destination="bfX-GO-d8t" kind="show" identifier="goToSummaryPage" id="bZu-V0-yeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hpb-Lp-ygU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5152.8000000000002" y="-476.31184407796104"/>
+        </scene>
+        <!--Photo Quiz View Controller-->
+        <scene sceneID="YV1-ox-MWy">
+            <objects>
+                <viewController id="NCg-5q-SRe" customClass="PhotoQuizViewController" customModule="_44QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QzG-V1-liA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heartImage" translatesAutoresizingMaskIntoConstraints="NO" id="hCv-5Z-1h0" userLabel="heartImage1">
+                                <rect key="frame" x="252" y="84" width="41" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heartImage" translatesAutoresizingMaskIntoConstraints="NO" id="oS2-H8-8Kc" userLabel="heartImage2">
+                                <rect key="frame" x="293" y="84" width="41" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heartImage" translatesAutoresizingMaskIntoConstraints="NO" id="2Pb-vA-RWd" userLabel="heartImage3">
+                                <rect key="frame" x="333" y="84" width="41" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="egI-2h-Vc3">
+                                <rect key="frame" x="0.0" y="34" width="375" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="progressTintColor" red="0.01191727836" green="0.90672999870000004" blue="0.24361612999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.01191727836" green="0.90672999870000004" blue="0.24361612999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="iGz-8T-VlH" userLabel="profilePhotoImage">
+                                <rect key="frame" x="2" y="54" width="76" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40U-GT-kiL" userLabel="scoreLabel" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="72" y="83" width="45" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.15795511009999999" green="0.69128483529999996" blue="0.44465503099999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybr-ER-nYp" userLabel="valueLabel" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="99" y="84" width="45" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.074399660830000006" green="0.3316791549" blue="0.2428081332" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeI-fe-sKo">
+                                <rect key="frame" x="149" y="64" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.41873878240000001" green="0.72442823649999999" blue="0.94023936990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKB-xo-quH" userLabel="timerLeftLabel" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="162" y="83" width="51" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.41873878240000001" green="0.72442823649999999" blue="0.94023936990000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Even though this lib was used in a few products on App Store, it’s still an experimental project." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wee-Sa-91E" userLabel="questionTextLabel">
+                                <rect key="frame" x="0.0" y="205" width="375" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="morphingProgress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH9-oK-Aqg" userLabel="Button1" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="9" y="570" width="175" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fourButtonChoices:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="Ojs-Pl-XGT"/>
+                                    <action selector="fourButtonChoices:" destination="NCg-5q-SRe" eventType="touchUpInside" id="fAv-hY-7KC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Js-yR-HlL" userLabel="Button2" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="192" y="570" width="175" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button2"/>
+                                <connections>
+                                    <action selector="fourButtonChoices:" destination="NCg-5q-SRe" eventType="touchUpInside" id="Fa6-j5-SK3"/>
+                                    <action selector="fourButtonChoices:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="iba-M5-qZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nU1-QI-Gfp" userLabel="Button3" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="9" y="671" width="175" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button3"/>
+                                <connections>
+                                    <action selector="fourButtonChoices:" destination="NCg-5q-SRe" eventType="touchUpInside" id="aYz-5F-ucN"/>
+                                    <action selector="fourButtonChoices:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="aiY-PS-5ca"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0KG-gY-fKj" userLabel="Button4" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="192" y="671" width="175" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button4"/>
+                                <connections>
+                                    <action selector="fourButtonChoices:" destination="Pw6-uy-jVJ" eventType="touchUpInside" id="cY1-Zw-ihI"/>
+                                    <action selector="fourButtonChoices:" destination="NCg-5q-SRe" eventType="touchUpInside" id="xbq-27-NxZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzr-0e-MXi" userLabel="settingsBtn">
+                                <rect key="frame" x="336" y="44" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="settingsNotClicked"/>
+                                <connections>
+                                    <action selector="settingsBtnPressed:" destination="NCg-5q-SRe" eventType="touchUpInside" id="5l9-e7-9g9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP7-ha-JC1" userLabel="soundBtn" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="336" y="131" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="unmute(settings)"/>
+                                <connections>
+                                    <action selector="soundBtnPressed:" destination="NCg-5q-SRe" eventType="touchUpInside" id="2OT-cY-GP6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCG-pV-S8t" userLabel="homeBtn" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="336" y="88" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="homeImage"/>
+                                <connections>
+                                    <action selector="homeBtnPressed:" destination="NCg-5q-SRe" eventType="touchUpInside" id="d1w-uZ-Nct"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tW7-cA-70v" userLabel="goldenQuestionTypeImage">
+                                <rect key="frame" x="140" y="128" width="95" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-MH-xhY" userLabel="mercyQuestionTypeImage">
+                                <rect key="frame" x="147" y="134" width="80" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0o3-gS-fav">
+                                <rect key="frame" x="9" y="305" width="358" height="225"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="3Cb-7f-mfa"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn1" destination="RH9-oK-Aqg" id="oIj-VK-prf"/>
+                        <outlet property="btn2" destination="9Js-yR-HlL" id="eh0-aR-x6B"/>
+                        <outlet property="btn3" destination="nU1-QI-Gfp" id="1fm-5L-eiT"/>
+                        <outlet property="btn4" destination="0KG-gY-fKj" id="2b0-u9-iVN"/>
+                        <outlet property="goldenQuestionTypeImage" destination="tW7-cA-70v" id="dGV-XQ-Uo6"/>
+                        <outlet property="heartImage1" destination="hCv-5Z-1h0" id="OGT-WB-whx"/>
+                        <outlet property="heartImage2" destination="oS2-H8-8Kc" id="nN7-7U-B01"/>
+                        <outlet property="heartImage3" destination="2Pb-vA-RWd" id="ccD-cs-W8h"/>
+                        <outlet property="homeBtn" destination="lCG-pV-S8t" id="Lqq-61-KyJ"/>
+                        <outlet property="mercyQuestionTypeImage" destination="hFY-MH-xhY" id="bpp-60-H6Q"/>
+                        <outlet property="plusLabel" destination="ybr-ER-nYp" id="9rg-BU-6co"/>
+                        <outlet property="progressBar" destination="egI-2h-Vc3" id="tEj-LY-rKU"/>
+                        <outlet property="questionImage" destination="0o3-gS-fav" id="r3p-fz-c1I"/>
+                        <outlet property="questionTextLabel" destination="wee-Sa-91E" id="lrn-E8-wyi"/>
+                        <outlet property="questionTypeImge" destination="tW7-cA-70v" id="I1g-jv-CUr"/>
+                        <outlet property="scoreLabel" destination="40U-GT-kiL" id="GKk-wD-wMO"/>
+                        <outlet property="settingsBtn" destination="bzr-0e-MXi" id="PXK-JM-oXV"/>
+                        <outlet property="soundBtn" destination="kP7-ha-JC1" id="0oa-aQ-K2R"/>
+                        <outlet property="timerLeftLabel" destination="IKB-xo-quH" id="wYT-Ri-dur"/>
+                        <segue destination="bfX-GO-d8t" kind="show" identifier="goToSummaryPage" id="9Gu-yI-25U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vmz-HU-o79" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5152.8000000000002" y="203.20197044334975"/>
+        </scene>
+        <!--Summary View Controller-->
+        <scene sceneID="G25-Tu-Jts">
+            <objects>
+                <viewController id="bfX-GO-d8t" customClass="SummaryViewController" customModule="_44QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WLO-Qb-FbK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bv7-I5-zbW">
+                                <rect key="frame" x="99" y="62" width="176" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="45"/>
+                                <color key="textColor" white="0.68589952256944442" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="man" translatesAutoresizingMaskIntoConstraints="NO" id="y2e-6R-wRP" userLabel="profileImage">
+                                <rect key="frame" x="108" y="142" width="158" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHc-Rf-NiI" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="16" y="455" width="343" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <state key="normal" title="Restart The Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartBtnClicked:" destination="bfX-GO-d8t" eventType="touchUpInside" id="wCZ-XA-Rre"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Upj-qR-Fdm" customClass="PressableButton" customModule="SwiftyButton">
+                                <rect key="frame" x="16" y="546" width="343" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <state key="normal" title="Home Page">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="homeBtnClicked:" destination="bfX-GO-d8t" eventType="touchUpInside" id="RnH-CB-C07"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVU-Sd-ggw" userLabel="scoreLabel" customClass="CountdownLabel" customModule="CountdownLabel">
+                                <rect key="frame" x="145" y="309" width="85" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="45"/>
+                                <color key="textColor" red="0.15686274510000001" green="0.69019607839999997" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jh2-hp-zNl">
+                                <rect key="frame" x="16" y="317" width="183" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="2IC-At-KF1"/>
+                    </view>
+                    <connections>
+                        <outlet property="homeBtn" destination="Upj-qR-Fdm" id="AUr-VC-D7O"/>
+                        <outlet property="restartBtn" destination="EHc-Rf-NiI" id="Nbw-e2-sll"/>
+                        <outlet property="scoreLabel" destination="SVU-Sd-ggw" id="AvJ-gJ-as3"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToHomePage" id="JSa-fe-UZm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VpQ-8H-eN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6481" y="-71"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heartImage" width="256" height="256"/>
+        <image name="homeImage" width="256" height="256"/>
+        <image name="man" width="256" height="256"/>
+        <image name="quizllerLogoName2" width="359" height="438"/>
+        <image name="settingsNotClicked" width="256" height="256"/>
+        <image name="unmute(settings)" width="256" height="256"/>
+        <image name="unmuteImage" width="256" height="256"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bZu-V0-yeJ"/>
+    </inferredMetricsTieBreakers>
+</document>

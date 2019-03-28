@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IAM-hL-9eW">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LTMorphingLabel Demo-->
+        <scene sceneID="vlG-gG-Crg">
+            <objects>
+                <viewController id="3ei-2r-m0A" customClass="LTDemoViewController" customModule="LTMorphingLabelDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D5d-Wo-IoW">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rE7-Va-JH8">
+                                <rect key="frame" x="20" y="275" width="627" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="fIE-hM-Ab0"/>
+                                    <constraint firstAttribute="height" constant="28" id="vaZ-df-xh8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Scale"/>
+                                    <segment title="Evaporate"/>
+                                    <segment title="Fall"/>
+                                    <segment title="Pixelate"/>
+                                    <segment title="Sparkle"/>
+                                    <segment title="Burn"/>
+                                    <segment title="Anvil"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="3ei-2r-m0A" eventType="valueChanged" id="rRV-iJ-mWz"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VJ-mH-2Xe">
+                                <rect key="frame" x="20" y="52" width="627" height="203"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.73750000000000004" green="0.0" blue="0.56877266069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeText:" destination="3ei-2r-m0A" eventType="touchUpInside" id="wca-7v-rZP"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ucn-av-UN6">
+                                <rect key="frame" x="20" y="325" width="120" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="9pE-1U-E4A"/>
+                                    <constraint firstAttribute="height" constant="28" id="TLk-pB-ubA"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Night"/>
+                                    <segment title="Day"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleLight:" destination="3ei-2r-m0A" eventType="valueChanged" id="SHB-V1-FQz"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="26" minValue="9" maxValue="42" translatesAutoresizingMaskIntoConstraints="NO" id="EOd-vo-0jD">
+                                <rect key="frame" x="168" y="323" width="477" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uft-oC-aVu"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeFontSize:" destination="3ei-2r-m0A" eventType="valueChanged" id="RPG-Ij-VXw"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm LTMorphingLabel. Tap Me Please." textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqc-dc-WVn" customClass="LTMorphingLabel" customModule="LTMorphingLabelDemo">
+                                <rect key="frame" x="20" y="52" width="627" height="203"/>
+                                <accessibility key="accessibilityConfiguration" identifier="morphingLabel" label="morphingLabel"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="3"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.73750000000000004" green="0.0" blue="0.56877266069999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EOd-vo-0jD" firstAttribute="top" secondItem="rE7-Va-JH8" secondAttribute="bottom" constant="20" id="7ro-9X-VKm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EOd-vo-0jD" secondAttribute="trailing" constant="4" id="DrY-mw-8sU"/>
+                            <constraint firstItem="fqc-dc-WVn" firstAttribute="leading" secondItem="D5d-Wo-IoW" secondAttribute="leadingMargin" id="FRI-HA-iwA"/>
+                            <constraint firstItem="rE7-Va-JH8" firstAttribute="top" secondItem="3VJ-mH-2Xe" secondAttribute="bottom" constant="20" id="FbJ-XZ-R2b"/>
+                            <constraint firstItem="fqc-dc-WVn" firstAttribute="top" secondItem="upB-mu-6Xz" secondAttribute="top" constant="20" id="JLl-ED-669"/>
+                            <constraint firstItem="EOd-vo-0jD" firstAttribute="leading" secondItem="Ucn-av-UN6" secondAttribute="trailing" constant="30" id="TpR-XE-wc6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rE7-Va-JH8" secondAttribute="trailing" id="URl-uL-VkH"/>
+                            <constraint firstItem="rE7-Va-JH8" firstAttribute="leading" secondItem="D5d-Wo-IoW" secondAttribute="leadingMargin" id="Uv1-gH-Yw5"/>
+                            <constraint firstItem="Ucn-av-UN6" firstAttribute="leading" secondItem="D5d-Wo-IoW" secondAttribute="leadingMargin" id="ato-cL-hIr"/>
+                            <constraint firstItem="3VJ-mH-2Xe" firstAttribute="leading" secondItem="D5d-Wo-IoW" secondAttribute="leadingMargin" id="d9f-iq-G1D"/>
+                            <constraint firstItem="3VJ-mH-2Xe" firstAttribute="top" secondItem="upB-mu-6Xz" secondAttribute="top" constant="20" id="ev9-ly-VWf"/>
+                            <constraint firstItem="upB-mu-6Xz" firstAttribute="bottom" secondItem="Ucn-av-UN6" secondAttribute="bottom" constant="22" id="fFq-dK-A0i"/>
+                            <constraint firstItem="upB-mu-6Xz" firstAttribute="bottom" secondItem="EOd-vo-0jD" secondAttribute="bottom" constant="22" id="grd-XJ-WqJ"/>
+                            <constraint firstItem="fqc-dc-WVn" firstAttribute="trailing" secondItem="D5d-Wo-IoW" secondAttribute="trailingMargin" id="izu-ll-ljE"/>
+                            <constraint firstItem="rE7-Va-JH8" firstAttribute="top" secondItem="fqc-dc-WVn" secondAttribute="bottom" constant="20" id="k9Z-OZ-VrU"/>
+                            <constraint firstItem="3VJ-mH-2Xe" firstAttribute="trailing" secondItem="D5d-Wo-IoW" secondAttribute="trailingMargin" id="o8d-0t-cq2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="upB-mu-6Xz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LTMorphingLabel Demo" id="A7j-8h-CTu">
+                        <barButtonItem key="rightBarButtonItem" title="Clear" id="Bsc-Fz-3C2">
+                            <color key="tintColor" red="1" green="0.0" blue="0.78291556679999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="clear:" destination="3ei-2r-m0A" id="JHT-bA-GcN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="label" destination="fqc-dc-WVn" id="glJ-ku-ziP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOt-ne-B2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="73"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BST-oi-p39">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcq-7b-9Jx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IAM-hL-9eW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Cel-o5-IrA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="V1l-3x-LRf">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="0.00019225223670915614" blue="0.803035042899366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3ei-2r-m0A" kind="relationship" relationship="rootViewController" id="Pr8-Cq-f6N"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1851" y="-700"/>
+        </scene>
+    </scenes>
+</document>
